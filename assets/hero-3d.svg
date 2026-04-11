@@ -33,14 +33,12 @@
         50% { r: 5; opacity: 1; }
       }
       @keyframes traveling-glow {
-        0% { transform: translateX(-380px); opacity: 0; }
-        10% { opacity: 1; }
-        90% { opacity: 1; }
-        100% { transform: translateX(300px); opacity: 0; }
+        0% { transform: translateX(-380px); }
+        100% { transform: translateX(300px); }
       }
       .circuit-node { animation: pulse-node 2s ease-in-out infinite; }
       .glow-element { animation: glow 3s ease-in-out infinite; }
-      .traveling-light { animation: traveling-glow 4s ease-in-out infinite; }
+      .traveling-glow-text { animation: traveling-glow 4s ease-in-out infinite; }
       #ellipse1 { animation: float1 8s ease-in-out infinite; }
       #ellipse2 { animation: float2 10s ease-in-out infinite; }
       #diamond1 { animation: rotate3d 5s ease-in-out infinite; transform-origin: 860px 198px; }
@@ -78,9 +76,8 @@
       <feDropShadow dx="0" dy="0" stdDeviation="12" flood-color="#00FFFF" flood-opacity="0.2"/>
     </filter>
     <filter id="traveling-glow-filter" x="-200" y="-100" width="600" height="300" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feGaussianBlur stdDeviation="12"/>
-      <feDropShadow dx="0" dy="0" stdDeviation="16" flood-color="#00D9FF" flood-opacity="0.8"/>
-      <feDropShadow dx="0" dy="0" stdDeviation="32" flood-color="#00FFFF" flood-opacity="0.5"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="14" flood-color="#000000" flood-opacity="0.6"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#1a1a1a" flood-opacity="0.4"/>
     </filter>
     <pattern id="grid" x="40" y="40" width="40" height="40" patternUnits="userSpaceOnUse">
       <rect x="0" y="0" width="40" height="40" fill="none" stroke="#1A4D5C" stroke-width="1" opacity="0.3"/>
@@ -124,14 +121,14 @@
     <polygon points="960,80 980,70 1000,80 980,100" fill="none" stroke="#FF00FF" stroke-width="1.5"/>
   </g>
 
-  <!-- Main name with traveling glow effect -->
+  <!-- Main name with traveling black glow effect -->
   <g filter="url(#name-glow-filter)" class="profile-text">
     <text x="70" y="170" font-family="'Courier New', monospace" font-size="88" font-weight="800" fill="url(#face)" letter-spacing="2">Bishal Sarkar</text>
   </g>
   
-  <!-- Traveling glow light that moves from B to R -->
-  <g class="traveling-light">
-    <ellipse cx="250" cy="170" rx="80" ry="45" fill="#00D9FF" opacity="0.3" filter="url(#traveling-glow-filter)"/>
+  <!-- Traveling dark glow constrained to text -->
+  <g class="traveling-glow-text" filter="url(#traveling-glow-filter)">
+    <text x="70" y="170" font-family="'Courier New', monospace" font-size="88" font-weight="800" fill="none" letter-spacing="2" opacity="0.5">Bishal Sarkar</text>
   </g>
 
   <!-- Tagline with neon effect -->
