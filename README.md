@@ -19,7 +19,7 @@
 			<p align="center">
 				<a href="https://www.instagram.com/bishal_sarkar?igsh=M3RiNTAyNzZyaW0w" target="_blank" rel="noreferrer"><img src="assets/instagram-3d.svg" alt="Instagram" width="280" /></a>
 				<br/>
-				<a href="https://www.linkedin.com/in/bishal-sarkar-839aa3284" target="_blank" rel="noreferrer"><img src="assets/linkedin-3d.svg" alt="LinkedIn" width="280" /></a>
+				<a href="https://www.linkedin.com/in/bishal-sarkar-839aa3284" target="_blank" rel="noreferrer"><img src="assets/linkedin-3d.svg" alt="LINKDIN" width="280" /></a>
 			</p>
 		</td>
 		<td valign="top" width="50%">
