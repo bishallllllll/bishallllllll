@@ -7,9 +7,9 @@
 </p>
 
 <p align="center">
-	<img src="https://img.shields.io/badge/Architecture-0B3B5C?style=for-the-badge&logo=homeassistantcommunitystore&logoColor=white" alt="Architecture badge" />
-	<img src="https://img.shields.io/badge/Design-102A44?style=for-the-badge&logo=figma&logoColor=white" alt="Design badge" />
-	<img src="https://img.shields.io/badge/Build-08111F?style=for-the-badge&logo=vercel&logoColor=white" alt="Build badge" />
+	<img src="https://img.shields.io/badge/Architecture-8B5DD9?style=for-the-badge&logo=homeassistantcommunitystore&logoColor=white" alt="Architecture badge" />
+	<img src="https://img.shields.io/badge/Design-D8A36F?style=for-the-badge&logo=figma&logoColor=111111" alt="Design badge" />
+	<img src="https://img.shields.io/badge/Build-06060B?style=for-the-badge&logo=vercel&logoColor=white" alt="Build badge" />
 </p>
 
 <table align="center">

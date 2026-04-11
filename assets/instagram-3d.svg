@@ -1,24 +1,24 @@
 <svg width="280" height="84" viewBox="0 0 280 84" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="280" y2="84" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#3A0CA3"/>
-      <stop offset="0.55" stop-color="#B5179E"/>
-      <stop offset="1" stop-color="#F72585"/>
+      <stop stop-color="#07060b"/>
+      <stop offset="0.48" stop-color="#4e3190"/>
+      <stop offset="1" stop-color="#d8a36f"/>
     </linearGradient>
     <linearGradient id="edge" x1="20" y1="16" x2="260" y2="68" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFFFFF" stop-opacity="0.42"/>
-      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.08"/>
+      <stop stop-color="#FFFFFF" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.05"/>
     </linearGradient>
     <filter id="shadow" x="0" y="0" width="280" height="84" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000000" flood-opacity="0.4"/>
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000000" flood-opacity="0.46"/>
     </filter>
   </defs>
   <g filter="url(#shadow)">
     <rect x="10" y="10" width="260" height="64" rx="18" fill="url(#bg)"/>
     <rect x="10" y="10" width="260" height="64" rx="18" fill="url(#edge)"/>
-    <path d="M66 28H54C47.3726 28 42 33.3726 42 40V44C42 50.6274 47.3726 56 54 56H66C72.6274 56 78 50.6274 78 44V40C78 33.3726 72.6274 28 66 28Z" stroke="white" stroke-width="4"/>
-    <circle cx="60" cy="42" r="7" stroke="white" stroke-width="4"/>
-    <circle cx="70" cy="32" r="2.5" fill="white"/>
-    <text x="94" y="48" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="white">Instagram</text>
+    <path d="M66 28H54C47.3726 28 42 33.3726 42 40V44C42 50.6274 47.3726 56 54 56H66C72.6274 56 78 50.6274 78 44V40C78 33.3726 72.6274 28 66 28Z" stroke="white" stroke-opacity="0.9" stroke-width="4"/>
+    <circle cx="60" cy="42" r="7" stroke="white" stroke-opacity="0.9" stroke-width="4"/>
+    <circle cx="70" cy="32" r="2.5" fill="#fff1dd"/>
+    <text x="94" y="48" font-family="Inter, Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="white">Instagram</text>
   </g>
 </svg>
