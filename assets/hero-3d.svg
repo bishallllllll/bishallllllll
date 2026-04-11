@@ -1,0 +1,125 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @keyframes float1 {
+        0%, 100% { transform: translate(0, 0); }
+        50% { transform: translate(-20px, 15px); }
+      }
+      @keyframes float2 {
+        0%, 100% { transform: translate(0, 0); }
+        50% { transform: translate(25px, -18px); }
+      }
+      @keyframes rotate3d {
+        0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+        25% { transform: rotateX(8deg) rotateY(12deg) rotateZ(2deg); }
+        50% { transform: rotateX(0deg) rotateY(20deg) rotateZ(0deg); }
+        75% { transform: rotateX(-6deg) rotateY(8deg) rotateZ(-3deg); }
+        100% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+      }
+      @keyframes pulse-text {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.88; }
+      }
+      @keyframes shimmer {
+        0%, 100% { fill-opacity: 1; stroke-opacity: 0.4; }
+        50% { fill-opacity: 0.7; stroke-opacity: 0.8; }
+      }
+      @keyframes glow {
+        0%, 100% { filter: drop-shadow(0 0 6px #00D9FF); }
+        50% { filter: drop-shadow(0 0 12px #00D9FF); }
+      }
+      @keyframes pulse-node {
+        0%, 100% { r: 3; opacity: 0.6; }
+        50% { r: 5; opacity: 1; }
+      }
+      .circuit-node { animation: pulse-node 2s ease-in-out infinite; }
+      .glow-element { animation: glow 3s ease-in-out infinite; }
+      #ellipse1 { animation: float1 8s ease-in-out infinite; }
+      #ellipse2 { animation: float2 10s ease-in-out infinite; }
+      #diamond1 { animation: rotate3d 5s ease-in-out infinite; transform-origin: 860px 198px; }
+      #diamond2 { animation: shimmer 3s ease-in-out infinite; }
+      .profile-text { animation: pulse-text 4s ease-in-out infinite; }
+    </style>
+    <linearGradient id="neon-cyan" x1="0" y1="0" x2="300" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00D9FF"/>
+      <stop offset="1" stop-color="#0099CC"/>
+    </linearGradient>
+    <linearGradient id="neon-magenta" x1="0" y1="0" x2="300" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF00FF"/>
+      <stop offset="1" stop-color="#CC00FF"/>
+    </linearGradient>
+    <linearGradient id="bg-tech" x1="0" y1="0" x2="1200" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D1B2A"/>
+      <stop offset="0.5" stop-color="#1B263B"/>
+      <stop offset="1" stop-color="#0F3B4D"/>
+    </linearGradient>
+    <linearGradient id="face" x1="280" y1="150" x2="920" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00FFFF"/>
+      <stop offset="1" stop-color="#00D9FF"/>
+    </linearGradient>
+    <filter id="blur" x="0" y="0" width="1200" height="420" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="35"/>
+    </filter>
+    <filter id="glow" x="0" y="0" width="1200" height="420" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#00D9FF" flood-opacity="0.4"/>
+    </filter>
+    <filter id="shadow" x="0" y="0" width="1200" height="420" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <pattern id="grid" x="40" y="40" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="40" height="40" fill="none" stroke="#1A4D5C" stroke-width="1" opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <!-- Background layers -->
+  <rect width="1200" height="420" rx="36" fill="url(#bg-tech)"/>
+  <rect width="1200" height="420" rx="36" fill="url(#grid)"/>
+  
+  <!-- Tech accent glows -->
+  <ellipse id="ellipse1" cx="260" cy="80" rx="180" ry="140" fill="#00D9FF" fill-opacity="0.12" filter="url(#blur)"/>
+  <ellipse id="ellipse2" cx="1020" cy="340" rx="220" ry="150" fill="#FF00FF" fill-opacity="0.1" filter="url(#blur)"/>
+  
+  <!-- Circuit board patterns on right -->
+  <path d="M800 60L900 60" stroke="#00D9FF" stroke-width="2" opacity="0.4"/>
+  <path d="M900 60L900 120" stroke="#00D9FF" stroke-width="2" opacity="0.4"/>
+  <path d="M900 120L950 120" stroke="#00D9FF" stroke-width="2" opacity="0.4"/>
+  <circle class="circuit-node" cx="800" cy="60" r="3" fill="#00D9FF" opacity="0.6"/>
+  <circle class="circuit-node" cx="900" cy="60" r="3" fill="#00D9FF" opacity="0.6"/>
+  <circle class="circuit-node" cx="900" cy="120" r="3" fill="#00D9FF" opacity="0.6"/>
+  <circle class="circuit-node" cx="950" cy="120" r="3" fill="#FF00FF" opacity="0.6"/>
+  
+  <path d="M1000 200L1050 200" stroke="#FF00FF" stroke-width="2" opacity="0.4"/>
+  <path d="M1050 200L1050 280" stroke="#FF00FF" stroke-width="2" opacity="0.4"/>
+  <path d="M1050 280L1100 280" stroke="#FF00FF" stroke-width="2" opacity="0.4"/>
+  <circle class="circuit-node" cx="1000" cy="200" r="3" fill="#FF00FF" opacity="0.6"/>
+  <circle class="circuit-node" cx="1050" cy="200" r="3" fill="#FF00FF" opacity="0.6"/>
+  <circle class="circuit-node" cx="1050" cy="280" r="3" fill="#FF00FF" opacity="0.6"/>
+  <circle class="circuit-node" cx="1100" cy="280" r="3" fill="#00D9FF" opacity="0.6"/>
+  
+  <!-- 3D geometric shapes with neon glow -->
+  <g class="glow-element">
+    <path id="diamond1" d="M860 64L1094 198L860 332L626 198L860 64Z" fill="none" stroke="url(#neon-cyan)" stroke-opacity="0.4" stroke-width="2.5"/>
+    <path id="diamond2" d="M860 92L1060 198L860 304L660 198L860 92Z" fill="none" stroke="url(#neon-magenta)" stroke-opacity="0.5" stroke-width="2.5"/>
+  </g>
+  
+  <!-- Tech hexagons -->
+  <g opacity="0.25">
+    <polygon points="200,320 220,310 240,320 220,340" fill="none" stroke="#00D9FF" stroke-width="1.5"/>
+    <polygon points="960,80 980,70 1000,80 980,100" fill="none" stroke="#FF00FF" stroke-width="1.5"/>
+  </g>
+
+  <!-- Main name with tech glow -->
+  <g filter="url(#shadow)" class="profile-text">
+    <text x="70" y="170" font-family="'Courier New', monospace" font-size="88" font-weight="800" fill="url(#face)" letter-spacing="2">Bishal Sarkar</text>
+  </g>
+
+  <!-- Tagline with neon effect -->
+  <g filter="url(#glow)" class="profile-text" style="animation-delay: 0.5s;">
+    <text x="84" y="248" font-family="'Courier New', monospace" font-size="28" font-weight="600" fill="#00D9FF" letter-spacing="3">ARCHITECT • DESIGNER • DEVELOPER</text>
+  </g>
+
+  <!-- Tech bars with gradient -->
+  <rect x="80" y="286" width="220" height="16" rx="8" fill="url(#neon-cyan)" opacity="0.7"/>
+  <rect x="80" y="318" width="360" height="8" rx="4" fill="url(#neon-magenta)" opacity="0.5"/>
+  <rect x="80" y="342" width="280" height="8" rx="4" fill="url(#neon-cyan)" opacity="0.35"/>
+</svg>
