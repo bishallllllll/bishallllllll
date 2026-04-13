@@ -1,16 +1,55 @@
-            - name: Snake Evolution
-  # You may pin to the exact commit or the version.
-  # uses: miccy/snake-evolution@42e6db66e50979a0fffbb857ed833c731f77abae
-  uses: miccy/snake-evolution@v1.3.0
-  with:
-    # GitHub username to generate snake for
-    github_user_name: bishallllllll
-    # GitHub token for API access (optional, uses public scraping if not provided)
-    github_token: # optional, default is 
-    # Output file path(s) - SVG only while GIF support is in progress
-    outputs: # optional, default is dist/snake.svg
-    # Color theme (github-light, github-dark, ocean, sunset, neon-gamer, cypherpunk; glass planned with future GIF support)
-    theme: # optional, default is github-dark
-    # Year to generate contributions for
-    year: # optional, default is 
-          
+# GitHub Action for generating a contribution graph with a snake eating your contributions.
+
+name: Generate Snake
+
+# Controls when the action will run. This action runs every 6 hours.
+
+on:
+  schedule:
+      # every 6 hours
+    - cron: "0 */6 * * *"
+
+# This command allows us to run the Action automatically from the Actions tab.
+  workflow_dispatch:
+
+# The sequence of runs in this workflow:
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+
+    # Checks repo under $GITHUB_WORKSHOP, so your job can access it
+      - uses: actions/checkout@v2
+
+    # Generates the snake  
+      - uses: Platane/snk@master
+        id: snake-gif
+        with:
+          github_user_name: bishallllllll 
+          # these next 2 lines generate the files on a branch called "output". This keeps the main branch from cluttering up.
+          gif_out_path: dist/github-contribution-grid-snake.gif
+          svg_out_path: dist/github-contribution-grid-snake.svg
+
+     # show the status of the build. Makes it easier for debugging (if there's any issues).
+      - run: git status
+
+      # Push the changes
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
+          force: true
+
+      - uses: crazy-max/ghaction-github-pages@v2.1.3
+        with:
+          # the output branch we mentioned above
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
