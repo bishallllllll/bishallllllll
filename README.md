@@ -34,6 +34,3 @@
 	</tr>
 </table>
 
-
-## watch out!!
-![snake gif](https://raw.githubusercontent.com/bishallllllll/bishallllllll/output/github-contribution-grid-snake.gif)
