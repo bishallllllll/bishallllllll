@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-	<b>A passionate architect from India</b>
+	<b>hey there Friend</b>
 </p>
 
 <p align="center">
